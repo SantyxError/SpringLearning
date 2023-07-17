@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Controller
@@ -36,7 +36,14 @@ public class IndexController {
 
     @RequestMapping("/listar")
     public String listar(Model model) {
-        List<Usuario> usuarios = new ArrayList<>();
+        List<Usuario> usuarios = Arrays.asList(
+                new Usuario("Andrés", "Gómez", "andres@correo.com"),
+                new Usuario("Carlos", "Gómez", "carlos@correo.com"),
+                new Usuario("Enrique", "Gómez", "enrique@correo.com"),
+                new Usuario("Tomás", "Gómez", "tomas@correo.com")
+        );
+
+
         model.addAttribute("titulo", "Listado de Usuarios");
         model.addAttribute("usuarios", usuarios);
         return "listar";
