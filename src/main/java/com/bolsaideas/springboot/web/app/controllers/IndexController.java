@@ -34,7 +34,6 @@ public class IndexController {
         return "perfil";
     }
 
-
     @RequestMapping("/listar")
     public String listar(Model model) {
         List<Usuario> usuarios = new ArrayList<>();
