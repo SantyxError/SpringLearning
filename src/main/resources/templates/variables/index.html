@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}"></title>
+</head>
+<body>
+<h1 th:text="${titulo}"></h1>
+<ul>
+    <li>
+        <a th:href="@{/variables/string/} + 'Hola Santi'" >variables/string/Hola Santi </a>
+    </li>
+    <li>
+        <a th:href="@{/variables/string/} + 'Que tal Santi'" >variables/string/Que tal Santi</a>
+    </li>
+    <li>
+        <a th:href="@{/variables/string/} + 'Saludos Santi' + '/' + 7" >variables/string/Hola Santi/7 </a>
+    </li>
+</ul>
+</body>
+</html>
